@@ -101,5 +101,22 @@
 </div>
 
 <script src="script.js"></script>
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyA6FtdUkn_10ZaHGctNS97EDsO2hpsej3c",
+  authDomain: "anhsresearch-67d98.firebaseapp.com",
+  projectId: "anhsresearch-67d98",
+  storageBucket: "anhsresearch-67d98.firebasestorage.app",
+  messagingSenderId: "906194461554",
+  appId: "1:906194461554:web:010401a4e798e4118073eb",
+  measurementId: "G-JVQFWVJTHB"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+</script>
 </body>
 </html>
