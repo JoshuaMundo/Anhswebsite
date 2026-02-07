@@ -1,0 +1,239 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0b0b0b, #7a0000);
+    color: white;
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    max-width: 1800px;
+    margin: auto;
+    padding: 30px 40px;
+}
+
+/* Card Styles */
+.card {
+    background: #111;
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px black;
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+    text-align: center;
+    color: #ff4d4d;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin: 15px 0;
+    text-align: center;
+    color: #ff4d4d;
+}
+
+h3 {
+    text-align: center;
+    color: #ff4d4d;
+    font-size: 1.3em;
+}
+
+.section-title {
+    color: #ffaaaa;
+    font-size: 22px;
+    margin: 20px 0 10px 0;
+    font-weight: bold;
+}
+
+/* Form Elements */
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+}
+
+input:disabled, select:disabled {
+    background: #333;
+    color: #888;
+    cursor: not-allowed;
+}
+
+/* Buttons */
+button {
+    background: #b30000;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #ff0000;
+}
+
+.save-btn {
+    background: #007700;
+}
+
+.save-btn:hover {
+    background: #00aa00;
+}
+
+.student-btn {
+    background: #222;
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 14px;
+    padding: 12px;
+}
+
+.student-btn:hover {
+    background: #333;
+}
+
+.student-btn.active {
+    background: #660000;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 25px;
+    min-height: 600px;
+}
+
+/* Login/Register Boxes */
+#loginBox, #registerBox {
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+/* Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.info-grid input {
+    margin: 0;
+}
+
+/* Tables */
+.table-wrap {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    background: #0a0a0a;
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 10px 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    background: #660000;
+    font-weight: bold;
+    color: #fff;
+}
+
+td input, td select {
+    width: 100%;
+    min-width: 80px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Status Styles */
+.pass {
+    color: #00ff66;
+    font-weight: bold;
+}
+
+.fail {
+    color: #ff4444;
+    font-weight: bold;
+}
+
+/* Scrollbar Styles */
+#studentList {
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+#studentList::-webkit-scrollbar {
+    width: 8px;
+}
+
+#studentList::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 4px;
+}
+
+#studentList::-webkit-scrollbar-thumb {
+    background: #660000;
+    border-radius: 4px;
+}
+
+#studentList::-webkit-scrollbar-thumb:hover {
+    background: #880000;
+}
+
+.table-wrap::-webkit-scrollbar {
+    height: 10px;
+}
+
+.table-wrap::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 4px;
+}
+
+.table-wrap::-webkit-scrollbar-thumb {
+    background: #660000;
+    border-radius: 4px;
+}
+
+.table-wrap::-webkit-scrollbar-thumb:hover {
+    background: #880000;
+}
+
+/* Responsive Design */
+@media(max-width: 1024px) {
+    .dashboard {
+        grid-template-columns: 280px 1fr;
+        gap: 15px;
+    }
+}
+
+@media(max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
