@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ANHS Student Information System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Ayala National High School</h1>
+  <h3>Student Information System</h3>
+
+  <!-- LOGIN -->
+  <div id="loginBox" class="card">
+    <h2>Login</h2>
+    <input id="loginEmail" placeholder="Email">
+    <input id="loginPass" type="password" placeholder="Password">
+    <button id="loginBtn">Login</button>
+    <p id="toRegister" class="switch">Create Student Account</p>
+  </div>
+
+  <!-- REGISTER -->
+  <div id="registerBox" class="card hidden">
+    <h2>Register Student</h2>
+    <input id="regName" placeholder="Full Name" required>
+    <select id="regSection" required>
+      <option value="">Select Section</option>
+      <option value="ICT-A">ICT-A</option>
+      <option value="ICT-B">ICT-B</option>
+      <option value="ICT-C">ICT-C</option>
+      <option value="ICT-D">ICT-D</option>
+    </select>
+    <input id="regGrade" placeholder="Grade Level" required>
+    <input id="regEmail" placeholder="Email" required>
+    <input id="regPass" type="password" placeholder="Password" required>
+    <button id="registerBtn">Register</button>
+    <p id="toLogin" class="switch">Back to Login</p>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" class="hidden">
+    <h2 id="dashTitle"></h2>
+    <div class="dashboard">
+
+      <!-- TEACHER PANEL -->
+      <div id="teacherPanel" class="card hidden">
+        <h3>Section</h3>
+        <select id="sectionSelect">
+          <option value="">Select Section</option>
+          <option value="ICT-A">ICT-A</option>
+          <option value="ICT-B">ICT-B</option>
+          <option value="ICT-C">ICT-C</option>
+          <option value="ICT-D">ICT-D</option>
+        </select>
+        <h3>Students</h3>
+        <div id="studentList"></div>
+        <p>Total Students: <span id="studentCount">0</span></p>
+      </div>
+
+      <!-- MAIN DASHBOARD -->
+      <div class="card">
+        <div class="table-wrap">
+          <div class="section-title">Student Info</div>
+          <input id="infoName" placeholder="Full Name">
+          <input id="infoGrade" placeholder="Grade Level">
+          <button id="saveInfoBtn">Save Info</button>
+
+          <div class="section-title">Grades (Pass/Fail)</div>
+          <table id="gradesTable"></table>
+
+          <div class="section-title">Summative Scores</div>
+          <table id="summativeTable"></table>
+
+          <div class="section-title">Written Outputs</div>
+          <table id="writtenTable"></table>
+
+          <div class="section-title">Performance Tasks</div>
+          <table id="performanceTable"></table>
+
+          <div class="section-title">Attendance (Calendar)</div>
+          <table id="attendanceTable"></table>
+
+          <div class="section-title">Quarter & Semester Average</div>
+          <table>
+            <tr><th>Quarter</th><th>Average</th></tr>
+            <tr><td>Quarter 1</td><td id="q1Avg">-</td></tr>
+            <tr><td>Quarter 2</td><td id="q2Avg">-</td></tr>
+            <tr><td>Semester Average</td><td id="semAvg">-</td></tr>
+          </table>
+
+          <div class="section-title">Final General Average</div>
+          <h2 id="finalGeneral"></h2>
+        </div>
+        <button id="saveEditsBtn" class="save-btn hidden">Save Teacher Edits</button>
+        <button id="logoutBtn">Logout</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
